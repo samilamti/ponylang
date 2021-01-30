@@ -1,0 +1,66 @@
+{
+    "name": "ubuntu18",
+    "id": "/subscriptions/60c7a51a-86d3-4e75-bd9d-0e25d6c23d19/resourceGroups/Remote-dev/providers/Microsoft.Compute/virtualMachines/ubuntu18",
+    "type": "Microsoft.Compute/virtualMachines",
+    "location": "uksouth",
+    "identity": {
+        "type": "SystemAssigned",
+        "principalId": "da0e3c10-b963-41f6-8222-53dea1647ef0",
+        "tenantId": "85af6ef0-03e0-4079-8e77-f50fd212b5e4"
+    },
+    "properties": {
+        "vmId": "5face80b-c22e-4f34-b513-cee505d7f25b",
+        "hardwareProfile": {
+            "vmSize": "Standard_D2s_v3"
+        },
+        "storageProfile": {
+            "imageReference": {
+                "publisher": "Canonical",
+                "offer": "UbuntuServer",
+                "sku": "18.04-LTS",
+                "version": "latest"
+            },
+            "osDisk": {
+                "osType": "Linux",
+                "name": "ubuntu18_OsDisk_1_b30b8d47b19c4094a33c1c6e840051be",
+                "createOption": "FromImage",
+                "caching": "ReadOnly",
+                "managedDisk": {
+                    "storageAccountType": "Standard_LRS",
+                    "id": "/subscriptions/60c7a51a-86d3-4e75-bd9d-0e25d6c23d19/resourceGroups/Remote-dev/providers/Microsoft.Compute/disks/ubuntu18_OsDisk_1_b30b8d47b19c4094a33c1c6e840051be"
+                },
+                "diskSizeGB": 30
+            },
+            "dataDisks": []
+        },
+        "osProfile": {
+            "computerName": "ubuntu18",
+            "adminUsername": "develop",
+            "linuxConfiguration": {
+                "disablePasswordAuthentication": true,
+                "ssh": {
+                    "publicKeys": [
+                        {
+                            "path": "/home/develop/.ssh/authorized_keys",
+                            "keyData": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCHIFL1SwqpzV0ey9UztlDefkKi\r\n0sKAm69Pcy95x+Amkd4Fj+UrjZfc54JmwmPY80+uGIz43GssqgD46eUBLa7uI3kt\r\nb/A5h+15TW4BpJrb29J8vvELxSFNs3OnJJWRYMss8EYzYUvJpfQGH/TxksLfo6ZW\r\nrfsr0166epbiZvDuWTh4U919OQJ9LUzlIrJ/utCVYBlIs+KVHOYH0z4pkyJ9kck6\r\nvImPuonLAxJobhJqy6eD9g0+yR13Tp8Uq3P4a53unIXpkOaNo3ft63mEQTMyI/3o\r\nygCc4twu4mPSfuj3S/rAXKfWoFOqQcZuxyxPRCX3hkorS3hpVO5fmnE6dF7R11cH\r\n/bNyNfBlvpNnNE4DUhvXnabSga6L6eMd49qKAKWMl7DxuJw9btpDhTGkSxEK8NUn\r\nuZk/Zd5gtLPvwXKwDfrSkpHWfbWeMwQqIgExt8l4ztDxXThq6IaohgAT5PCwI9Ap\r\nlxvA+XlR+vnuRlcf5jifGXYzN22+Juf4m8+VHVs= generated-by-azure\r\n"
+                        }
+                    ]
+                }
+            },
+            "secrets": []
+        },
+        "networkProfile": {
+            "networkInterfaces": [
+                {
+                    "id": "/subscriptions/60c7a51a-86d3-4e75-bd9d-0e25d6c23d19/resourceGroups/Remote-dev/providers/Microsoft.Network/networkInterfaces/ubuntu18259"
+                }
+            ]
+        },
+        "diagnosticsProfile": {
+            "bootDiagnostics": {
+                "enabled": true
+            }
+        },
+        "provisioningState": "Succeeded"
+    }
+}
